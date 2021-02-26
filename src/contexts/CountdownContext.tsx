@@ -22,7 +22,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
 
     const { startNewChallenge } = useContext(ChallengesContext);
 
-    const [time, setTime] = useState(0.1 * 60); // CONSTANTE AONDE ESTAMOS SETANDO DENTRO DO TIME(25) E DO SETIME(60) ENTAO MULTIPLICAMOS OS DOIS PARA CONVERTELOS EM NUNBER
+    const [time, setTime] = useState(25 * 60); // CONSTANTE AONDE ESTAMOS SETANDO DENTRO DO TIME(25) E DO SETIME(60) ENTAO MULTIPLICAMOS OS DOIS PARA CONVERTELOS EM NUNBER
     const [isActive, setIsActive] = useState(false); // CASO O CLICK NO BUTTON NÃO OCORRA O USESTAT SERA FALSE
     const [hasFinished, setHasFinished] = useState(false);
 
@@ -36,7 +36,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     function resetCountdown() {
         clearTimeout(countdownTimeout);
         setIsActive(false); // ALTERANDO VALOR DO USE EFECT PARA FALSE
-        setTime(0.1 * 60);
+        setTime(25 * 60);
         setHasFinished(false);
     }
     // FAZENDO O TEMPO ABAIXAR
